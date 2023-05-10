@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How To Install Osticket On Windows 10 - QnA</title>
+    <meta name="description" content="How To Install Osticket On Windows 10, How to Install osTicket v1.12 - Windows IIS, , , , osTicket, 2019-08-19T02:36:28.000000Z, 20, How to Install osTicket with Nginx on Ubuntu 16.04, www.howtoforge.com, 1112 x 734, png, , 20, how-to-install-osticket-on-windows-10, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How To Install Osticket On Windows 10 - QnA" />
+    <meta property="og:description" content="How To Install Osticket On Windows 10, How to Install osTicket v1.12 - Windows IIS, , , , osTicket, 2019-08-19T02:36:28.000000Z, 20, How to Install osTicket with Nginx on Ubuntu 16.04, www.howtoforge.com, 1112 x 734, png, , 20, how-to-install-osticket-on-windows-10, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How To Install Osticket On Windows 10 - QnA" />
+    <meta name="twitter:description" content="How To Install Osticket On Windows 10, How to Install osTicket v1.12 - Windows IIS, , , , osTicket, 2019-08-19T02:36:28.000000Z, 20, How to Install osTicket with Nginx on Ubuntu 16.04, www.howtoforge.com, 1112 x 734, png, , 20, how-to-install-osticket-on-windows-10, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://onmythink.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://onmythink.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://onmythink.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://onmythink.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://onmythink.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://onmythink.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://onmythink.github.io">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://onmythink.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">How To Install Osticket On Windows 10</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">janineison</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=How+To+Install+Osticket+On+Windows+10" alt="How To Install Osticket On Windows 10">
+                    </div>
+                    <p></p>
+                    <p>steps how to install and create bootable drive in windows 10?​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#steps-how-to-install-and-create-bootable-drive-in-windows-10%e2%80%8b">1.
+                                            steps how to install and create bootable drive in windows 10?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#discuss-the-process-of-how-to-install-windows-10-on-your-pc">2.
+                                            Discuss the process of how to install windows 10 on your PC.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-differences-in-the-installation-process-between-installing-a-windows-7-and-windows-10-os-based-on-the-video%e2%80%8b">3.
+                                            what are the differences in the installation process between installing a windows 7 and windows 10 OS based on the video​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-you-have-pre-installed-windows-7-in-your-computer-what-will-happen-if-you-install-a-new-operating-system-for-instance-windows-10-in-the-same-computer-drivea-the-windows-7-will-be-replaced-by-wi">4.
+                                            2. You have pre-installed windows 7 in your computer. What will happen if you install a new operating system, for instance windows 10 in the same computer drive?A. The Windows 7 will be replaced by windows 10B. The installation  of Windows 10 will not be allowedC. The system will crash because of two installations.D. There will be two active operating system in your computer, Windows 7 and Windows 10.Pa help po Need ko na po Maayos po na sagot ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-importance-of-installation-procedures-of-windows-8-and-windows-10-%e2%80%8b">5.
+                                            What are the importance of installation procedures of Windows 8 and Windows 10? ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#4-step-how-to-install-a-window-7%e2%80%8b">6.
+                                            4 step how to install a window 7​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-to-install-an-app-in-window-7">7.
+                                            how to install an app in window 7?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#enumerate-the-stepsprocedure-in-installing-windows-10%e2%80%8b">8.
+                                            enumerate the steps/procedure in installing windows 10​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-to-install-operating-system-windows-8%e2%80%8b">9.
+                                            how to install Operating System, Windows 8​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-to-install-windows-10-on-pc-or-laptop-plsss-pa-answer-po%e2%80%8b">10.
+                                            How to install Windows 10 on PC or Laptop plsss pa answer po​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#write-thoughts-about-the-installation-of-windows-10-%e2%80%8b">11.
+                                            write thoughts about the installation of windows 10. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#create-a-flowchart-on-how-to-install-windows-in-a-computer-%e2%80%8b">12.
+                                            Create a flowchart on how to install windows in a computer.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-do-you-install-windows-7%e2%80%8b">13.
+                                            how do you install windows 7​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-do-you-install-macintosh-operating-system-and-windows-10-via-usb-flash-drive">14.
+                                            how do you install Macintosh Operating System and Windows 10 via USB Flash drive</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-importance-of-installation-procedures-of-windows-8-and-windows-10-%e2%80%8b">15.
+                                            What are the importance of installation procedures of Windows 8 and Windows 10? ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-to-install-windows-xp%e2%80%8b">16.
+                                            how to install windows XP​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#steps-and-explanation-the-installation-of-windows-10%e2%80%8b">17.
+                                            steps and explanation the installation of Windows 10​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#explain-in-your-own-words-how-to-prepare-and-install-a-windows-10-operating-system">18.
+                                            explain in your own words how to prepare and install a windows 10 Operating System</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#direction-arrange-the-following-sequence-of-steps-to-install-windows-10-write-numbers-1-10-on-the-blank-line-sign-in-to-windows-10-with-microsoft-account-use-express-settings-select-the-drive-to">19.
+                                            Direction: Arrange the following sequence of steps to install Windows 10. Write numbers 1-10 on the blank line. Sign in to Windows 10 with Microsoft account. Use Express settings. Select the drive to install Windows 10 Accept the license agreement. Select the language then click next button, and click Install now. Wait for Windows 10 to finish setting up. Choose to Customize the settings.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-importance-of-installation-procedures-of-window-10%e2%80%8b">20.
+                                            what are the importance of  installation procedures of window 10​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-how-to-install-programs-in-windows-8-enumerate-the-step-2-how-to-uninstall-programs-windows-8-enumerate-the-step-3-how-to-install-programs-%e2%80%8b">21.
+                                             1.how to install programs in Windows 8 enumerate the step.2. how to uninstall programs windows 8 enumerate the step.3.  how to install programs ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#rearrange-in-proper-sequence-the-given-steps-on-how-to-install-windows-10-using-numbers-1-15%e2%80%8b">22.
+                                            rearrange in proper sequence the given steps on how to install windows 10 using numbers 1-15​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#in-the-installation-of-windows-10-os-what-will-happen-to-the-computer-after-the-windows-copy-the-files-to-the-hard-drive-and-begin-the-installation%e2%80%8b">23.
+                                            in the installation of windows 10 OS what will happen to the computer after the windows copy the files to the hard drive and begin the installation​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-do-you-partition-in-new-hard-drive-during-ms-windows-10-installation%e2%80%8b">24.
+                                            how do you partition in new hard drive during ms windows 10 installation​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#enumerate-the-steps-in-installing-windows-7-and-windows-10-please-answer%e2%80%8b">25.
+                                            enumerate the steps in installing windows 7 and windows 10? please answer​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-minimum-requirements-for-installation-ofwindows-8-windows-10%e2%80%8b">26.
+                                            What are the minimum requirements for installation of?Windows 8 Windows 10​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#why-need-to-learnhow-to-install-a-windows-operatingsystem-and-how-to-installcomputer-software%e2%80%8b">27.
+                                             why need to learn"how to install a Windows OperatingSystem" and "how to installcomputer software"?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-how-to-install-windows-10-step-by-step-2-how-to-configure-or-update-drivers-step-by-step%e2%80%8b">28.
+                                            1.how to install windows 10 (step by step) 2.how to configure or update drivers? (step by step)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#process-of-windows-10-installation%e2%80%8b">29.
+                                            process of windows 10 installation​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-are-the-importance-of-installation-procedures-of-windows-10%e2%80%8b">30.
+                                            What are the importance of installation procedures of Windows 10?​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="steps-how-to-install-and-create-bootable-drive-in-windows-10%e2%80%8b">
+                            1. steps how to install and create bootable drive in windows 10?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Making a bootable Windows USB drive is simple:</p><p>1. Format a 16GB (or higher) USB flash device.</p><p>2. Download the Windows 10 media creation tool from  Microsoft.</p><p>3. Run the media creation wizard to download the Windows 10 installation files.</p><p>4. Create the installation media.</p><p>5. Eject the USB flash device</p><br />
+                                            <h2 class="ez-toc-section" id="discuss-the-process-of-how-to-install-windows-10-on-your-pc">
+                            2. Discuss the process of how to install windows 10 on your PC.</h2><br />
+                        <p> </p><p></p> Check your device meets the Windows 10 system requirements. ...Create USB installation media. ...Run the installer tool. ...Use your installation media. ...Change your computer's boot order. ...Restart your device. ...Complete the installation.<p></p><p></p><p>PS: THATS FROM GO.OGLE NOT FROM ME</p><p></p><p>I DON'T KNOW HOW TO INSTALL WINDOWS 10 IN A PC BECAUSE I DON'T HAVE EITHER A PC</p><p></p><p></p><p>SO-SORRY</p><p></p><p></p><p>#BrainlyEveryday</p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-differences-in-the-installation-process-between-installing-a-windows-7-and-windows-10-os-based-on-the-video%e2%80%8b">
+                            3. what are the differences in the installation process between installing a windows 7 and windows 10 OS based on the video​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Windows 10 vs. Windows 7: Differences You Need to Know
+</p><p>Microsoft Will No Longer Offer Support for Windows 7 as of January 2020. ...
+</p><p>New Software Releases Are Already Incompatible With Windows 7. ...
+</p><p>Windows 10 Is Faster. ...
+</p><p>Windows 10 Is More Secure Than Windows 7. ...
+</p><p>Windows 10 Is Easier to Use Than Its Predecessors.</p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="2-you-have-pre-installed-windows-7-in-your-computer-what-will-happen-if-you-install-a-new-operating-system-for-instance-windows-10-in-the-same-computer-drivea-the-windows-7-will-be-replaced-by-wi">
+                            4. 2. You have pre-installed windows 7 in your computer. What will happen if you install a new operating system, for instance windows 10 in the same computer drive?A. The Windows 7 will be replaced by windows 10B. The installation  of Windows 10 will not be allowedC. The system will crash because of two installations.D. There will be two active operating system in your computer, Windows 7 and Windows 10.Pa help po Need ko na po Maayos po na sagot ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>A po</p><p>The windows 7 operating system will be replaced by windows 10 </p><p></p><p><strong>Explanation:</strong></p><p>hope it helps</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-importance-of-installation-procedures-of-windows-8-and-windows-10-%e2%80%8b">
+                            5. What are the importance of installation procedures of Windows 8 and Windows 10? ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>There are 3 versions of Windows 8 currently available to try. In order of release, with the product keys, they are:
+</p><p>
+</p><p>Windows 8 Developer Preview
+</p><p>6RH4V-HNTWC-JQKG8-RFR3R-36498
+</p><p>
+</p><p>Windows 8 Consumer Preview
+</p><p>DNJXJ-7XBW8-2378T-X22TX-BKG7J
+</p><p>
+</p><p>Windows 8 Release Preview
+</p><p>TK8TP-9JN6P-7X7WW-RFFTV-B7QPF
+</p><p>
+</p><p>To install Windows 8, you will usually have the following options at your disposal:
+</p><p>
+</p><p>A fresh install
+</p><p>Dual-booting with Windows 7 or some other OS
+</p><p>An upgrade from Windows 7 to Windows 8 (Not recommended)
+</p><p>Trying out Windows 8 on a virtual machine
+</p><p>Before you begin, make sure your PC meets the minimum requirements laid down by Microsoft. These are not set in stone and you can install Windows 8 on PCs which do not meet these requirements, but your experience may not be as fluid on such a system.
+</p><p>
+</p><p>System requirements
+</p><p>The minimum system requirements are as follows:
+</p><p>
+</p><p>Windows 8 x86 (32-bit version)
+</p><p>
+</p><p>1GHz Processor
+</p><p>1GB RAM
+</p><p>16GB storage space
+</p><p>DirectX 9 graphics device with WDDM 1.0 or higher driver
+</p><p>Windows 8 x86_64 (64-bit version)
+</p><p>
+</p><p>1GHz Processor
+</p><p>2GB RAM
+</p><p>20GB storage space
+</p><p>DirectX 9 graphics device with WDDM 1.0 or higher driver
+</p><p>Initial setup
+</p><p>
+</p><p>Make sure you take a backup of all your important data before you begin. There is very little chance of something going wrong but if it does, you should be prepared.
+</p><p>For whichever installation method you choose, you must have the minimum storage space ( 16GB or 20GB as specified above) available for your Windows 8 installation.
+</p><p>Keep all your drivers handy, especially if you are installing Windows 8 on a laptop or PC which requires proprietary drivers. At the very least, keep a copy of your LAN and/or Wi-Fi drivers depending on how you access the Internet.
+</p><p>Installation media
+</p><p>
+</p><p>Windows 8 is available as a Web installer or an ISO from here.
+</p><p>The Consumer Preview has been bundled with our June issue DVD and the Release Preview has been bundled with the July issue.
+</p><p>Creating a Windows 8 USB/DVD installer
+</p><p>
+</p><p>Download the Windows 8 ISO.
+</p><p>Download the Windows 7 USB/DVD tool from here.
+</p><p>Install the Windows 7 USB/DVD tool using default options.
+</p><p>Run the program.
+</p><p>Hit “Browse”, navigate to your Windows 8 (or Windows 7) iso file and select it.
+</p><p>
+</p><p>Insert a USB drive (at least 4GB) or a blank DVD.
+</p><p>Hit “Next”.
+</p><p>Select “USB device” or “DVD” depending on what method of installation you want.
+</p><p>
+</p><p> </p><p><strong>Explanyan:</strong></p><p><strong>yan lng po ung answer ko:)DJC</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="4-step-how-to-install-a-window-7%e2%80%8b">
+                            6. 4 step how to install a window 7​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Installing Windows 7 is straightforward—if you’re doing a clean install, simply boot up your computer with the Windows 7 installation DVD inside the DVD drive and instruct your computer to boot from the DVD (you may need to press a key, such as F11 or F12, while the computer is starting to enter the boot selection screen). If you’re upgrading, simply boot into Windows Vista, insert the disc, and run the installer (if you are using Windows XP, see the previous sidebar ).
+</p><p>
+</p><p>When the installer has booted up, you will be greeted with the screen shown in Figure 1-2 (the upgrade screen is slightly different; you will have an option to check the compatibility of your system or start the installation). You will be asked to select the language to install, the time and currency format, and your keyboard type.
+</p><p>
+</p><p>With the selections made, you can now install Windows 7 by clicking the “Install now” button (see Figure 1-3).
+</p><p>
+</p><p>You will be asked to accept the license agreement. (If you are upgrading, you’ll first have the option to go online to get any updates to the installer first.) Check the licensing checkbox and continue.
+</p><p>
+</p><p>On the next screen, you have a choice between upgrading your existing Windows or installing a fresh copy of Windows. If you are using Windows XP or earlier, the first option will not work for you—select the Custom (advanced) option (see Figure 1-4).
+</p><p>
+</p><p>For a fresh installation, you will be asked to select a disk for installing Windows 7. Select the appropriate disk and click Next (see Figure 1-5). If you are upgrading, the Windows 7 installer will generate a compatibility report and save it to your desktop.
+</p><p>
+</p><p>Windows will now take some time to copy all the files into the selected disk and proceed with the installation (see Figure 1-6). This will take about 20–30 minutes, depending on the speed of your computer.
+</p><p>
+</p><p>When the installation is complete, Windows 7 will restart. After Windows 7 has been restarted, you should see the screen shown in Figure 1-7. Provide a username; your computer name will be created based on what you have entered (you can change it to another name if you want to after the installation). Click Next.
+</p><p>
+</p><p>You will be asked to enter a password to protect your user account. You are strongly advised to provide one. In the next screen, you will be asked to enter a product key to activate Windows 7.
+</p><p>
+</p><p>You will also be asked to select a way to update Windows. I suggest that you select the first option, “Use recommended settings”; see Figure 1-8.</p><p>Next, you will set up the current date and time, and finally, if your computer has a network card, Windows 7 will prompt you to select your current location (see Figure 1-9; wireless network users will be asked to select a wireless network to connect to). Choose a location that best describes the environment you are in.
+</p><p>
+</p><p>That’s it! You are now ready to explore Windows 7 (see Figure 1-10).</p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="how-to-install-an-app-in-window-7">
+                            7. how to install an app in window 7?</h2><br />
+                        <p><strong>Answer:</strong></p><p>Download the app's installer or run the .exe file</p><br />
+                                            <h2 class="ez-toc-section" id="enumerate-the-stepsprocedure-in-installing-windows-10%e2%80%8b">
+                            8. enumerate the steps/procedure in installing windows 10​</h2><br />
+                        <p><strong>Answer:</strong></p><p>STEP 1: UPGRADE TO WINDOWS 10</p><p>You can’t perform a clean installation of Windows 10 until you’ve performed an upgrade installation and activated the operating system. This done, confirm that Windows 10 has been activated by going to Start &gt; Settings &gt; Update &amp; security &gt; Activation. Look in the right of the window and you should see Activation: Windows is activated. If you don’t see this, you must not proceed and you’ll need to wait until Windows 10 activates.</p><p></p><p>STEP 2: UPGRADE TO WINDOWS 10</p><p>You’ll also need to know which version of Windows 10 you’re using so that you can download the same version. You’ll see the edition of Window 10 you have in the window opened in Step 1 — Windows 10 Pro, in our example.</p><p></p><p>Next, search 'System' and choose the first option to see whether you’re using the 32-bit or 64-bit version of Windows.</p><p></p><p>STEP 3: DOWNLOAD THE WINDOWS 10 MEDIA CREATION TOOL</p><p>The Windows 10 download is around 2.5GB and will need to be copied to a blank DVD or a USB flash drive for the installation, so make sure you have something suitable to hand for this.</p><p></p><p>STEP 4: RUN THE WINDOWS 10 MEDIA CREATION TOOL</p><p>When the download has finished, plug in your USB flash drive or insert a blank DVD in your PC’s DVD drive. Find the downloaded MediaCreationTool.exe file in yourDownloads folder and double-click it to run it.</p><p></p><p>When the Windows 10 Setup window appears, select the Create installation media for another PC option and click the Next button.</p><p></p><p>STEP 5: CHOOSE YOUR WINDOWS 10 VERSION</p><p>On the next screen, choose the Language, Edition and Architecture (32-bit or 64-bit) to match your current version of Windows 10. Don’t select one of the N editions — these lack Windows Media Player. Click Next to continue.</p><p></p><p>STEP 6: CHOOSE A STORAGE DEVICE AND START THE DOWNLOAD</p><p>Select the device you’re going to use for the Windows 10 installation — USB flash drive or an ISO file for burning to DVD. Click Next.</p><p></p><p>Select the USB flash drive, or a folder on your PC, to store the Windows 10 setup files. Click Next and the 4GB download will begin.</p><p>If you created a DVD ISO file, you’ll now need to burn the file to a DVD before you can use it to boot your PC. Else you can boot using the USB flash drive.</p><p></p><p>STEP 7: BEGIN THE WINDOWS 10 INSTALLATION</p><p>After you boot your PC using the Windows 10 DVD or USB flash drive, choose the Install now option and then Skip the request for a product key to activate Windows. As long as you’ve already upgraded this PC to Windows 10, you won’t need a product key.</p><p></p><p>STEP 8: PERFORM A CUSTOM INSTALL</p><p>When prompted, choose the Custom: Install Windows only (advanced) option. This will erase everything on your existing Windows 10 drive (usually C:), so be sure you’ve backed up everything you want to keep before going any further.</p><p></p><p>STEP 9: CHOOSE WHERE TO INSTALL</p><p>Select the hard drive partition you want to install Windows 10 on. This should already be labelled as Windows 7, 8 or 10, but it should also be the largest partition in the list. If you’re not sure which partition to use, seek help before going any further.</p><p></p><p>If you’re happy to continue, click the Format option and click OK on the warning dialog box that appears. When the drive format is complete, click Next.</p><p></p><p>STEP 10: COMPLETE THE SET UP</p><p>The Windows 10 installation will now start. When it’s almost complete, you’ll be asked for a product key again, so click the Do this later option at the bottom of the screen and finish the rest of the set up.</p><p></p><p>STEP 11: CONFIRM THAT WINDOWS 10 HAS ACTIVATED</p><p>Once Windows 10 is installed, repeat Step 1 to check that it has been activated — you may need to click the Activate button. You may also need to install the necessary drivers for your PC’s network or Wi-Fi adapter first, since activation requires internet access.</p><p></p><p>If activation won’t complete successfully, you’ll need to contact Microsoft, explain what’s happened and ask for an activation code. This is inconvenient, but should be straightforward as long as your previous Windows 10 installation was activated.</p><p></p><p><strong>Explanation:</strong></p><p><strong>HOPE</strong><strong> </strong><strong>IT </strong><strong>HELPS </strong><strong>:</strong><strong>)</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="how-to-install-operating-system-windows-8%e2%80%8b">
+                            9. how to install Operating System, Windows 8​</h2><br />
+                        <p><strong>Answer:</strong></p><p>its windows 1,2,3,4,5,6,7,8,9 and 10</p><p><strong>Explanation:</strong></p><p>hope it help</p><br />
+                                            <h2 class="ez-toc-section" id="how-to-install-windows-10-on-pc-or-laptop-plsss-pa-answer-po%e2%80%8b">
+                            10. How to install Windows 10 on PC or Laptop plsss pa answer po​</h2><br />
+                        <p><strong>Answer:</strong></p><p>On the Windows Setup screen, select your language, time and currency format, and keyboard layout. Click “Next” to continue. When you reach the installer screen, select “Install Now” and follow the instructions to install Windows 10 on your PC. When you see the Activate Windows screen, you’ll need to either enter a key or skip it.</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="write-thoughts-about-the-installation-of-windows-10-%e2%80%8b">
+                            11. write thoughts about the installation of windows 10. ​</h2><br />
+                        <p><strong>Windows 10 installs the very same way as Windows 8/8.1, and to a lesser extent, Windows 7. Most consumers received their copy of Windows 10 as a free upgrade to their existing computers. Other consumers obtained Windows 10 through the purchase of a new a computer from a retailer. Those two examples cover most of the consumer Windows 10 market, save for the gamers and enthusiasts who often build their own PCs. Large to medium-sized businesses and other institutions usually have some type of software agreement with Microsoft that grants them access to Windows 10 installers as ISO files. </strong><strong>They </strong><strong>completely wipe any new PC </strong><strong>They </strong><strong>receive and install </strong><strong>Their </strong><strong>custom image of Windows 7 or Windows 10 through MDT. Most times, </strong><strong>They</strong><strong> never even see the OS the OEM placed on the new computer’s hard drive.</strong></p><p></p><p><strong>#</strong><strong>CarryOnLearning</strong></p><br />
+                                            <h2 class="ez-toc-section" id="create-a-flowchart-on-how-to-install-windows-in-a-computer-%e2%80%8b">
+                            12. Create a flowchart on how to install windows in a computer.​</h2><br />
+                        <p>I think it is a project </p><p><strong>Explanation:</strong></p><p>srry I didn't answer</p><br />
+                                            <h2 class="ez-toc-section" id="how-do-you-install-windows-7%e2%80%8b">
+                            13. how do you install windows 7​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Visit Microsoft.com to download the Windows 7 USB/DVD Download Tool (see Resources). Double-click the executable file to launch the Download Tool installer and follow the on-screen instructions to perform the installation.</p><p><strong>Explanation:</strong></p><p>You can find Windows 7 for free everywhere on the internet and it can be downloaded without any hassle or special requirements.</p><br />
+                                            <h2 class="ez-toc-section" id="how-do-you-install-macintosh-operating-system-and-windows-10-via-usb-flash-drive">
+                            14. how do you install Macintosh Operating System and Windows 10 via USB Flash drive</h2><br />
+                        <p><strong>Answer:</strong></p><p>macOS bootable USB on Windows 10</p><p>RESCUING A MAC USING WINDOWS</p><p>HOW TO QUICKLY CREATE A MACOS BOOTABLE USB ON WINDOWS 10</p><p>Here are the steps to create a macOS Catalina bootable USB media with GPT partition support on Windows 10 to rescue your Mac computer.</p><p>Avatar for Mauro Huc</p><p>Mauro Huc @pureinfotech</p><p>January 3, 2022</p><p></p><p> </p><p>TWEET SHARE SUBMIT</p><p>It does not matter whether you use macOS, Windows 10, or Windows 11. It’s just a matter of time until your computer will refuse to start, which could happen for many reasons, including (and not limited to) file corruption, hardware failure, and buggy update. If the unexpected happens with an Apple computer, you can use a macOS bootable USB with the installation media to repair it.</p><p></p><p>This is one of the main reasons you should consider making a macOS bootable USB when your device works properly. However, if none of your devices (MacBook, MacBook Air, MacBook Pro, iMac, Mac Pro, or Mac Mini) are not working when you need them the most, you can use a Windows computer to rescue your Apple device. You can use a Windows 10 (or 11), Windows 8.1, or Windows 7 device to quickly create a USB bootable installation media to reinstall macOS Monterey, Big Sur, or Catalina on your Mac.</p><p></p><p>In this guide, you will learn the steps to create a macOS Monterey bootable USB installation on Windows 10, which you can use to reinstall or upgrade the Apple OS.</p><p></p><p>Requirements</p><p>Create macOS bootable USB installation media</p><p>Create GPT partition on a USB flash drive</p><p>Requirements</p><p>Before proceeding, you’ll need the following:</p><p></p><p>Broken Mac computer running macOS (version 10, 11, 12, or higher).</p><p>A trial copy of the TransMac software.</p><p>One high-quality USB flash drive with 16GB of storage.</p><p>Copy of macOS (DMG file).</p><p>Create macOS bootable USB installation media</p><p>To create a bootable USB drive with macOS, use these steps:</p><p></p><p>Download and install TransMac on Windows 10.</p><p></p><p></p><p> </p><p>Quick note: This is a paid software, but it gives you a 15-day trial, which is more than enough time. (If this works for you and you want to support the developer, you can purchase the full version.)</p><p>Connect the USB flash drive. (If you have any data on the flash drive, remember to back it up since this process will erase everything on it.)</p><p></p><p>Right-click the TransMac app and select the Run as administrator option.</p><p></p><p>Click the Run button. (If you use the trial version, wait 15 seconds.)</p><p></p><p>TransMac on Windows 10</p><p>TransMac on Windows 10</p><p>Right-click the USB flash drive, select the Format Disk for Mac option from the left navigation pane.</p><p></p><p>Format Disk for Mac using GPT partition</p><p>Format Disk for Mac using GPT partition</p><p>Quick note: You want to do this before creating the bootable media because there is a good chance that the drive was formatted using a Windows device. If this is the case, the chances are that it’s using an MBR partition, and the USB drive needs a GPT partition to work on a Mac.</p><p>Click the Yes button to format the drive on the warning message.</p><p></p><p>Format warning</p><p>Format warning</p><p>Confirm a name for the drive. For example, “macOS bootable USB.”</p><p></p><p></p><p> </p><p>Click the OK button.</p><p></p><p>Format USB for macOS with label</p><p>Format USB for macOS with label</p><p>Click the Yes button.</p><p></p><p>Overwrite warning</p><p>Overwrite warning</p><p>Click the OK button.</p><p></p><p>Right-click the USB flash drive and select the Restore with Disk Image option from the left navigation pane.</p><p></p><p>TransMac Restore with Disk Image option</p><p>TransMac Restore with Disk Image option</p><p>Click the Yes button to confirm the erase of the USB flash drive data.</p><p></p><p>Delete warning</p><p>Delete warning</p><p>Click the browse button on the right.</p><p></p><p>Select the .dmg file with the macOS installation files.</p><p></p><p>Select dmg macOS file to create bootable USB drive</p><p>Select dmg macOS file to create a bootable USB drive</p><p>Click the Open button.</p><p></p><p>Click the OK button.</p><p></p><p>Click the Yes button.</p><p></p><p>TransMac create macOS USB bootable drive warning</p><p>TransMac creates a macOS USB bootable drive warning.</p><p>Once you complete the steps, you can now insert the USB flash drive on your Mac computer to install, reinstall, or upgrade the operating system to the latest macOS version, which can be Sierra, Catalina, Big Sur, Monterey, or higher.</p><p><strong>Explanation:</strong></p><p>yan po </p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-importance-of-installation-procedures-of-windows-8-and-windows-10-%e2%80%8b">
+                            15. What are the importance of installation procedures of Windows 8 and Windows 10? ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Pareho nila kailangan ng drives na pede installan ng system nila so para hindi magkaerror, i format ulit ung drive. </p><br />
+                                            <h2 class="ez-toc-section" id="how-to-install-windows-xp%e2%80%8b">
+                            16. how to install windows XP​</h2><br />
+                        How do i Install windows XP?<p></p><p>To install Windows XP by starting the computer from the Windows XP CD-ROM, insert the Windows XP CD-ROM into your CD or DVD drive, and then restart the computer. When you see the "Press any key to boot from CD" message, press any key to start the computer from the Windows XP CD-ROM.</p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="steps-and-explanation-the-installation-of-windows-10%e2%80%8b">
+                            17. steps and explanation the installation of Windows 10​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Windows 10 Installation</p><p>1.Introduction: Windows 10 Installation. ...</p><p></p><p>2.Step 1: Upgrade to Windows 10. ...</p><p></p><p>3.Step 2: Upgrade to Windows 10. ...</p><p></p><p>4.Step 3: Download the Windows 10 Media Creation Tool. ...</p><p></p><p>5.Step 4: Run the Windows 10 Media Creation Tool. ...</p><p></p><p>6.Step 5: Choose Your Windows 10 Version. ...</p><p></p><p>7.Step 6: Choose a Storage Device and Start the Download.</p><p></p><p>More items...</p><p><strong>Answer:</strong></p>Windows 10 Installation<p></p><p>Step 1: Upgrade to Windows 10</p><p>You can’t perform a clean installation of Windows 10 until you’ve performed an upgrade installation and activated the operating system.</p><p><strong>Step 2: Upgrade to Windows 10</strong></p><p><strong>You’ll also need to know which version of Windows 10 you’re using so that you can download the same version. </strong></p><p><strong>Step 3: Download the Windows 10 Media Creation Tool</strong></p><p>The Windows 10 download is around 2.5GB and will need to be copied to a blank DVD or a USB flash drive for the installation, so make sure you have something suitable to hand for this.</p><p>Step 4: Run the Windows 10 Media Creation Tool</p><p><strong>When the download has finished, plug in your USB flash drive or insert a blank DVD in your PC’s DVD drive.</strong></p><p><strong>Step 5: Choose Your Windows 10 Version</strong></p><p><strong>On the next screen, choose the Language, Edition and Architecture (32-bit or 64-bit) to match your current version of Windows 10. </strong></p><p><strong>Step 6: Choose a Storage Device and Start the Download</strong><strong>.</strong></p><p><strong>Select the device you’re going to use for the Windows 10 installation — USB flash drive or an ISO file for burning to DVD. Click Next.</strong></p><p><strong>Step 7: Begin the Windows 10 Installation</strong></p><p><strong>After you boot your PC using the Windows 10 DVD or USB flash drive, choose the Install now option and then Skip the request for a product key to activate Windows. </strong></p><p><strong>Step 8: Perform a Custom Install</strong></p><p><strong>When prompted, choose the Custom: Install Windows only (advanced) option. </strong></p><p><strong>Step 9: Choose Where to Install</strong></p><p><strong>Select the hard drive partition you want to install Windows 10 on. This should already be labelled as Windows 7, 8 or 10, but it should also be the largest partition in the list. If you’re not sure which partition to use, seek help before going any further</strong><strong>.</strong></p><p><strong>Step 10: Complete the Set Up</strong></p><p><strong>The Windows 10 installation will now start. When it’s almost complete, you’ll be asked for a product key again, so click the Do this later option at the bottom of the screen and finish the rest of the set up.</strong></p><p><strong>Step 11: Confirm That Windows 10 Has Activated</strong></p><p><strong>Once Windows 10 is installed, repeat Step 1 to check that it has been activated — you may need to click the Activate button. You may also need to install the necessary drivers for your PC’s network or Wi-Fi adapter first, since activation requires internet access.</strong></p><p></p><p><strong>#</strong><strong>C</strong><strong>a</strong><strong>r</strong><strong>r</strong><strong>y</strong><strong>O</strong><strong>n</strong><strong>L</strong><strong>e</strong><strong>a</strong><strong>r</strong><strong>n</strong><strong>i</strong><strong>n</strong><strong>g</strong><strong>s</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="explain-in-your-own-words-how-to-prepare-and-install-a-windows-10-operating-system">
+                            18. explain in your own words how to prepare and install a windows 10 Operating System</h2><br />
+                        <p><strong>Answer:</strong></p>Prepare for a Successful Windows 10 UpgradePress Windows key + X.Click Command Prompt (Admin)Type each command at the prompt then hit enter after each scan is complete)Dism /Online /Cleanup-Image /CheckHealth.Dism /Online /Cleanup-Image /ScanHealth.Dism /Online /Cleanup-Image /RestoreHealth.<p></p>Prepare for a Successful Windows 10 Upgrade<p></p>There’s still plenty of time, so when you finally decide to pull the trigger, here’s some things you can do before you start the upgrade to ensure everything goes as smooth as possible.<p></p>1 – Fix Hard Disk and OS Errors<p></p>If you have been running an installation of Windows for many years now, it’s a possibility even though it’s running smooth; there might be potential blockers to a successful upgrade. Broken applications, operating system updates, improper shutdown, power outages and other factors can corrupt files on the hard disk that could make the upgrade to Windows 10 challenging. Windows for years has included built-in utilities that can fix most of these common problems. Be warned, you will need to get your hands dirty with the command line for some of these actions.<p></p>The first one we will start with is the check disk command that scans your hard disk for errors and makes attempts to fix them. If you are upgrading from a previous version of Windows, sometimes corrupted system files can prevent setup from working properly. See the following article for instructions:<p></p>How to Check if Your Computer’s Hard Disk Drive is Bad<p></p>Also, run the System File Checker utility that will scan your system and attempt to fix broken operating system files:<p></p>Click Start (Windows 8 users, press Windows key + X &gt; Command Prompt (Admin)Type: CMD, from the results, right click CMDClick ‘Run as Administrator’At the Command Prompt, type: sfc /scannowThis will check for any integrity violationsWhen complete, restart your computerFor a computer running Windows 8 or later, another powerful command line utility users can run is the Deployment Image Servicing and Management tool that is used to service a Windows installation. Similar to the System File Checker utility, you can use DISM to correct corrupted system files and determine the status of the system.<p></p>Press Windows key + XClick Command Prompt (Admin)Type each command at the prompt then hit enter after each scan is complete)Dism /Online /Cleanup-Image /CheckHealthDism /Online /Cleanup-Image /ScanHealthDism /Online /Cleanup-Image /RestoreHealth<p></p><p></p><p></p>2 – Disconnect non-essential devices attached to your computer.<p></p>If you have non-essential external devices (printer, scanner, etc.) attached to your computer during installation, these can interfere with the setup engine and prevent the installation from completing because Windows 10 is trying to detect and install them. So, keep the bare essentials attached, keyboard and mouse. If you have an external hard disk or USB thumb drive attached, disconnect those too, I notice those can confuse setup.<p></p>3 – Disable your Antivirus utility, non-essential services, and startup programs.<p></p><p></p>If you are upgrading from a previous version of Windows or a previous Windows 10 build, a typical blocker for Windows setup is security utilities. Disable them; these include Antivirus, AntiSpyware and Firewall utilities. In most cases, it is strongly recommended you uninstall these security utilities and install versions compatible with Windows 10. Norton offered a free upgrade to a compatible version of Windows 10 one of my systems.<p></p>4 – Make sure you install the latest updates for your current version of Windows.<p></p>I have noticed before a new version of Windows launches; Microsoft might offer fixes that can make the upgrade go smoother. You can choose this option during the Windows 10 setup wizard, but it seems to take forever, instead, run Windows Update manually from within your current version of Windows. Click Start &gt; All Programs &gt; Windows Update (or press Windows key + R &gt; type: wuapp.exe &gt; hit Enter key) click Check for updates.<p></p>5 – Make sure you have full administrative privileges.<p></p>If you are using a standard account, this can prevent the Windows 10 App from presenting the Windows 10 offer. If you are installing from the Media Creation Tool, that will be blocked too since setup won’t have the privilege to write setup files to the hard disk.Press Windows key + RType: control userpasswords then hit Enter on your keyboardClick Change account typeMake sure your account privileges is set to Administrator.<p></p>If your computer is part of a business network, you will need to demote your PC to Workgroup mode.<p><strong>Explanation:</strong></p>I HOPE ITS HELPFUL<p></p><p><strong>#</strong><strong>C</strong><strong>A</strong><strong>R</strong><strong>R</strong><strong>Y</strong><strong>O</strong><strong>N</strong><strong>L</strong><strong>E</strong><strong>A</strong><strong>R</strong><strong>N</strong><strong>I</strong><strong>N</strong><strong>G</strong></p><p><strong>I</strong><strong> </strong><strong>HOPE</strong><strong> </strong><strong>THAT</strong><strong> </strong><strong>YOU</strong><strong> </strong><strong>FOLLOW</strong><strong> </strong><strong>ME</strong></p><p><strong>I</strong><strong> </strong><strong>HOPE</strong><strong> </strong><strong>THAT</strong><strong> </strong><strong>YOU</strong><strong> </strong><strong>HEART</strong><strong> </strong><strong>THIS</strong><strong>❤️</strong></p><p><strong>AND</strong></p><p><strong>I</strong><strong> </strong><strong>HOPE</strong><strong> </strong><strong>THAT</strong><strong> </strong><strong>YOU</strong><strong> MAKE</strong><strong> THIS</strong><strong> BRAINLIEST</strong><strong> ANSWER</strong></p><p><strong>(•‿•)</strong><strong>(｡•̀ᴗ-)✧</strong></p><br />
+                                            <h2 class="ez-toc-section" id="direction-arrange-the-following-sequence-of-steps-to-install-windows-10-write-numbers-1-10-on-the-blank-line-sign-in-to-windows-10-with-microsoft-account-use-express-settings-select-the-drive-to">
+                            19. Direction: Arrange the following sequence of steps to install Windows 10. Write numbers 1-10 on the blank line. Sign in to Windows 10 with Microsoft account. Use Express settings. Select the drive to install Windows 10 Accept the license agreement. Select the language then click next button, and click Install now. Wait for Windows 10 to finish setting up. Choose to Customize the settings.​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>1_Choose to Customize the settings.</strong></p><p><strong>2</strong><strong>_</strong><strong>Select the language then click next </strong><strong>button.</strong></p><p><strong>3</strong><strong>_</strong><strong>C</strong><strong>lick Install now.</strong></p><p><strong>4</strong><strong>_</strong><strong>Select the drive to install Windows 10 Accept the license agreement.</strong></p><p><strong>5</strong><strong>_</strong><strong>Use Express settings.</strong></p><p><strong>6</strong><strong>_</strong><strong>Wait for Windows 10 to finish setting up. </strong></p><p><strong>7</strong><strong>_</strong><strong>Sign in to Windows 10 with Microsoft account.</strong></p><p></p><p><strong>Explanation:</strong></p><p>#learning</p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-importance-of-installation-procedures-of-window-10%e2%80%8b">
+                            20. what are the importance of  installation procedures of window 10​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Introduction: Windows 10 Installation Files left behind by the previous operation system often cause problems, as can changes made to those files by other applications. That's why the usual advice for installing a new version of Windows is to perform a 'clean' install.</p><p>Windows 10 lets you find software you need for large and small tasks, and you can run apps either windowed or full-screen. These apps run in their own sandboxes, so they're more secure than old-school Windows apps.</p><p><strong>Explanation:</strong></p><p>hope it helps you</p><p>#CARRY ON LEARNING</p><br />
+                                            <h2 class="ez-toc-section" id="1-how-to-install-programs-in-windows-8-enumerate-the-step-2-how-to-uninstall-programs-windows-8-enumerate-the-step-3-how-to-install-programs-%e2%80%8b">
+                            21.  1.how to install programs in Windows 8 enumerate the step.2. how to uninstall programs windows 8 enumerate the step.3.  how to install programs ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.</p><p>Insert the Windows 8 DVD or USB Memory key into your system and restart your computer. ...</p><p></p><p>When the menu appears, select the appropriate device to boot from, ie. ...</p><p></p><p>Windows 8 Setup appears.</p><p></p><p>Select Language to install, Time and currency format, and Keyboard or input method and select Next.</p><p></p><p>Select Install Now.</p><p></p><p>2. </p><p>Right-click in the screen's bottom-left corner and choose the Control Panel from the pop-up menu.</p><p></p><p>When the Control Panel appears, choose Uninstall a Program from the Programs category. ...</p><p></p><p>Click the unloved program and then click its Uninstall, Change, or Repair button.</p><p></p><p>3.</p><p></p><p></p><p> </p><br />
+                                            <h2 class="ez-toc-section" id="rearrange-in-proper-sequence-the-given-steps-on-how-to-install-windows-10-using-numbers-1-15%e2%80%8b">
+                            22. rearrange in proper sequence the given steps on how to install windows 10 using numbers 1-15​</h2><br />
+                        <p><strong>Answer:</strong></p><p>rearrange in proper sequence the given steps on how to install windows 10 using numbers 1-15</p><p></p><p><strong>Answer:</strong></p><p>asan ung eh aarrange po jan?</p><br />
+                                            <h2 class="ez-toc-section" id="in-the-installation-of-windows-10-os-what-will-happen-to-the-computer-after-the-windows-copy-the-files-to-the-hard-drive-and-begin-the-installation%e2%80%8b">
+                            23. in the installation of windows 10 OS what will happen to the computer after the windows copy the files to the hard drive and begin the installation​</h2><br />
+                        <p><strong>Answer:</strong></p><p>THE ANSWER IS THE COPY</p><p></p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="how-do-you-partition-in-new-hard-drive-during-ms-windows-10-installation%e2%80%8b">
+                            24. how do you partition in new hard drive during ms windows 10 installation​</h2><br />
+                        <p><strong>Answer:</strong></p><p>How do you partition a new hard drive during MS Windows 10 installation?</p><p>Creating partition with remaining unallocated space</p><p>Open Start.</p><p>Search for Disk Management, click the top result to open the app.</p><p>Right-click the unallocated space on the drive and select the New Simple Volume option. ...</p><p>Click the Next button.</p><p>Specify the amount of space (in megabytes) for the partition in megabytes.</p><p><strong>Explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="enumerate-the-steps-in-installing-windows-7-and-windows-10-please-answer%e2%80%8b">
+                            25. enumerate the steps in installing windows 7 and windows 10? please answer​</h2><br />
+                        <p><strong>Explanation:</strong></p><p>When you install Windows you need an internet connection or download a ISO file or a Standalone installer (NOTE: THIS CAN TAKE UP 1-5 GB OF STORAGE). After downloading put it in a Empty USB and transfer the file and put it on your PC or you can simply double tap the file and follow the on-screen instructions. Your Welcome!!</p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-minimum-requirements-for-installation-ofwindows-8-windows-10%e2%80%8b">
+                            26. What are the minimum requirements for installation of?Windows 8 Windows 10​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Windows 8 (also applied to Windows 8.1)</p><p>For 32 bit </p><p>   RAM      1 GB</p><p>   Storage 16 GB ( SSD for Better Performance)</p><p>   CPU       1 GHz CPU ( also support SoC )</p><p>For 64 bit</p><p>   RAM      2 GB</p><p>   Storage 20 GB ( SSD for better performance)</p><p>   CPU       1 GHz CPU ( also support SoC )</p><p></p><p>Windows 10 (also applied to Windows 9 ( If your a windows Insider))</p><p>For 32 bit</p><p>     RAM         1 GB</p><p>     Storage    16 GB ( SSD for Better Performance)</p><p>     CPU         1 GHz or faster</p><p>     GPU         DirectX 9 or later with WDDM 1.0 Driver</p><p>     OS            Windows 7 SP1 and later</p><br />
+                                            <h2 class="ez-toc-section" id="why-need-to-learnhow-to-install-a-windows-operatingsystem-and-how-to-installcomputer-software%e2%80%8b">
+                            27.  why need to learn"how to install a Windows OperatingSystem" and "how to installcomputer software"?​</h2><br />
+                        <p><strong>Answer:</strong></p><p> <strong>-</strong><strong>how to install a Windows Operating</strong></p><p><strong>how to install a Windows OperatingSystem</strong></p><p><strong>✓</strong><strong>Change the computer's boot order. Set the CD, DVD or disc drive as the first boot device if you are trying to boot from a disc. Or, set the first boot device to your USB drive if you're trying to boot from a USB thumb drive. ...</strong></p><p><strong>✓</strong><strong>Save</strong><strong> the settings change and exit BIOS.</strong></p><p></p><p><strong>-</strong><strong>how to install</strong></p><p><strong>how to installcomputer software"?</strong></p><p></p><p><strong>✓</strong><strong>Locate and download an .exe file.</strong></p><p><strong>✓</strong><strong>Locate and double-click the .exe file. (It will usually be in your Downloads folder.)</strong></p><p><strong>✓</strong><strong>A dialog box will appear. </strong></p><p><strong>✓</strong><strong>Follow</strong><strong> the instructions to install the software.</strong></p><p><strong>✓</strong><strong>The software will be installed.</strong></p><p></p><p></p><p><strong>Explanation:</strong></p><p>(^^)☑enjoy.. learning</p><br />
+                                            <h2 class="ez-toc-section" id="1-how-to-install-windows-10-step-by-step-2-how-to-configure-or-update-drivers-step-by-step%e2%80%8b">
+                            28. 1.how to install windows 10 (step by step) 2.how to configure or update drivers? (step by step)​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.how to install windows 10 (step by step)</p><p>ANSWER:</p>How to install Windows 10Make sure your device meets the minimum system requirements. For the latest version of Windows 10, you'll need to have the following: Create installation media. Microsoft has a tool specifically for creating installation media. Use the installation media. Change your computer's boot order. Save settings and exit BIOS/UEFI.<p></p><p></p><p></p><p> 2.how to configure or update drivers? (step by step)</p><p>ANSWER:</p>To update a device driver:Start Device Manager by typing 'Devmgmt. msc' in the Run dialog box.Right-click the desired device and select Properties.Click the 'Driver' tab and then click the Update Driver button.<p></p><p>HOPE ITS HELP</p><p></p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="process-of-windows-10-installation%e2%80%8b">
+                            29. process of windows 10 installation​</h2><br />
+                        <p><strong>Answer:</strong></p><p>250GB</p><p></p><p><strong>Explanation:</strong></p><p>delete all app</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="what-are-the-importance-of-installation-procedures-of-windows-10%e2%80%8b">
+                            30. What are the importance of installation procedures of Windows 10?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>While the Windows 10 upgrade process has gone smoothly for most Windows 7 and 8 users, it has caused problems for others. Upgrading from one version of Windows to another is rarely a great idea. Files left behind by the previous operation system often cause problems, as can changes made to those files by other applications.</p><p><strong>Explanation:</strong></p>#CarryOnLearning <br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/KCz1ZKGOp28?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>technology_and_home_economics</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/organic-barley-new-zealand.html">Organic Barley New Zealand</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/author-s-purpose-worksheet.html">Author s Purpose Worksheet</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/criteria-for-singing-contest.html">Criteria For Singing Contest</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/shakey-s-mcu-menu.html">Shakey s Mcu Menu</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/devilish-cooking-game.html">Devilish Cooking Game</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/bumblebee-poem.html">Bumblebee Poem</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/pn-junction-diode-ppt-free-download.html">Pn Junction Diode Ppt Free Download</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/apat-na-kaibigan.html">Apat Na Kaibigan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/cl2-lewis.html">Cl2 Lewis</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/forbes-town-center-forbestown-road-taguig-metro-manila.html">Forbes Town Center Forbestown Road Taguig Metro Manila</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/121-varick-street-new-york.html">121 Varick Street New York</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/sino-si-miguel-lopez-de-legazpi.html">Sino Si Miguel Lopez De Legazpi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/nagkamali-ng-utos-buod.html">Nagkamali Ng Utos Buod</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/images-of-chopsuey.html">Images Of Chopsuey</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/agawid-in-tagalog.html">Agawid In Tagalog</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/jollibee-spam-sandwich.html">Jollibee Spam Sandwich</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/tula-about-sa-pag-ibig.html">Tula About Sa Pag Ibig</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/importance-of-oral-language-pdf.html">Importance Of Oral Language Pdf</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/juan-de-plasencia-customs-of-the-tagalogs-book.html">Juan De Plasencia Customs Of The Tagalogs Book</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://onmythink.github.io/day-spa-interior.html">Day Spa Interior</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://onmythink.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://onmythink.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://onmythink.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://onmythink.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://onmythink.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
